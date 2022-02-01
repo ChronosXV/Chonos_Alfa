@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChronosDataSet88" targetNamespace="http://tempuri.org/ChronosDataSet88.xsd" xmlns:mstns="http://tempuri.org/ChronosDataSet88.xsd" xmlns="http://tempuri.org/ChronosDataSet88.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Chronos" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Chronos (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MenuInicio.Properties.Settings.GlobalReference.Default.Chronos" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="certificadosTableAdapter" GeneratorDataComponentClassName="certificadosTableAdapter" Name="certificados" UserDataComponentName="certificadosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Chronos (Settings)" DbObjectName="Chronos.dbo.certificados" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT legajo FROM dbo.certificados</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="legajo" DataSetColumn="legajo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ChronosDataSet88" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ChronosDataSet88" msprop:Generator_UserDSName="ChronosDataSet88">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="certificados" msprop:Generator_TableClassName="certificadosDataTable" msprop:Generator_TableVarName="tablecertificados" msprop:Generator_TablePropName="certificados" msprop:Generator_RowDeletingName="certificadosRowDeleting" msprop:Generator_RowChangingName="certificadosRowChanging" msprop:Generator_RowEvHandlerName="certificadosRowChangeEventHandler" msprop:Generator_RowDeletedName="certificadosRowDeleted" msprop:Generator_UserTableName="certificados" msprop:Generator_RowChangedName="certificadosRowChanged" msprop:Generator_RowEvArgName="certificadosRowChangeEvent" msprop:Generator_RowClassName="certificadosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="legajo" msprop:Generator_ColumnVarNameInTable="columnlegajo" msprop:Generator_ColumnPropNameInRow="legajo" msprop:Generator_ColumnPropNameInTable="legajoColumn" msprop:Generator_UserColumnName="legajo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

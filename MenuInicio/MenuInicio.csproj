@@ -1,0 +1,2396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB66F321-88F3-41DE-BEB0-88A609071800}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MenuInicio</RootNamespace>
+    <AssemblyName>MenuInicio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.4.4\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABM\ABM-8_RegistrarHistEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM-8_RegistrarHistEmpleado.Designer.cs">
+      <DependentUpon>ABM-8_RegistrarHistEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\01-Inicio_Secion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\01-Inicio_Secion.Designer.cs">
+      <DependentUpon>01-Inicio_Secion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\02-ContenedorRegistrarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\02-ContenedorRegistrarEmpresa.Designer.cs">
+      <DependentUpon>02-ContenedorRegistrarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\02-Sesion_Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\02-Sesion_Administrador.Designer.cs">
+      <DependentUpon>02-Sesion_Administrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\03-ContenedorRegistrarSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\03-ContenedorRegistrarSite.Designer.cs">
+      <DependentUpon>03-ContenedorRegistrarSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\03_Sesion_ABM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\03_Sesion_ABM.Designer.cs">
+      <DependentUpon>03_Sesion_ABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\04-Gestion_de_Tiempo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\04-Gestion_de_Tiempo.Designer.cs">
+      <DependentUpon>04-Gestion_de_Tiempo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\05-GestionLicencia_y_Novedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\05-GestionLicencia_y_Novedades.Designer.cs">
+      <DependentUpon>05-GestionLicencia_y_Novedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM-2_ConsultarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM-2_ConsultarEmpleado.Designer.cs">
+      <DependentUpon>ABM-2_ConsultarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM-1_RegistrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM-1_RegistrarEmpleado.Designer.cs">
+      <DependentUpon>ABM-1_RegistrarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ABM-6_RegistrarSueldoBejerman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\ABM-6_RegistrarSueldoBejerman.Designer.cs">
+      <DependentUpon>ABM-6_RegistrarSueldoBejerman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Celula_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Celula_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet81.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet81.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet82.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet82.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet83.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet83.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet84.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet84.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet85.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet85.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet86.cs">
+      <DependentUpon>ChronosDataSet86.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet86.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet86.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet87.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet87.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet88.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet88.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet89.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet89.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet90.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet90.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet91.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet91.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet92.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet92.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet93.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet93.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet_Sueldos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet_Sueldos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CLASE\ContenedorRegistrarUsuario.cs" />
+    <Compile Include="DATASET\Convenio_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Convenio_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\DS_TablaEmpleado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_TablaEmpleado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Empleados_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empleados_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Empresa_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Empresa_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Estado_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Estado_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Jornada_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jornada_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\MovimientoEmpleados_DataSet.cs">
+      <DependentUpon>MovimientoEmpleados_DataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DATASET\MovimientoEmpleados_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MovimientoEmpleados_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Site_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Site_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\Usuario_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Usuario_DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LN\Imprime_LN_4_Gen_Repor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\Imprime_LN_4_Gen_Repor.Designer.cs">
+      <DependentUpon>Imprime_LN_4_Gen_Repor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LN\Imprime_RPT_LN_4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Imprime_RPT_LN_4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LN\Imprimir_DataSet_LN4.cs">
+      <DependentUpon>Imprimir_DataSet_LN4.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LN\Imprimir_DataSet_LN4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Imprimir_DataSet_LN4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LN\Legajo_Certificado.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Legajo_Certificado.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN-1_3_GenerarCertificadoTrabajo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\LN-1_3_GenerarCertificadoTrabajo.Designer.cs">
+      <DependentUpon>LN-1_3_GenerarCertificadoTrabajo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_10_EliminarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_10_EliminarUsuario.Designer.cs">
+      <DependentUpon>A_1_10_EliminarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_11_RegistrarPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_11_RegistrarPerfil.Designer.cs">
+      <DependentUpon>A_1_11_RegistrarPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_12_RegistrarArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_12_RegistrarArea.Designer.cs">
+      <DependentUpon>A_1_12_RegistrarArea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13-EliminarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13-EliminarEmpresa.Designer.cs">
+      <DependentUpon>A_1_13-EliminarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13_1-RegistrarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13_1-RegistrarEmpresa.Designer.cs">
+      <DependentUpon>A_1_13_1-RegistrarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13_RegistrarEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_13_RegistrarEmpresa.Designer.cs">
+      <DependentUpon>A_1_13_RegistrarEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14-RegistrarSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14-RegistrarSite.Designer.cs">
+      <DependentUpon>A_1_14-RegistrarSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14_1-EliminarSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14_1-EliminarSite.Designer.cs">
+      <DependentUpon>A_1_14_1-EliminarSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14_2-ActualizarSite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_14_2-ActualizarSite.Designer.cs">
+      <DependentUpon>A_1_14_2-ActualizarSite.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_15_RegistrarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_15_RegistrarDepartamento.Designer.cs">
+      <DependentUpon>A_1_15_RegistrarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_1_RegistrarBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_1_RegistrarBarrio.Designer.cs">
+      <DependentUpon>A_1_1_RegistrarBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_2_RegistrarLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_2_RegistrarLocalidad.Designer.cs">
+      <DependentUpon>A_1_2_RegistrarLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_4_RegistrarPais.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_4_RegistrarPais.Designer.cs">
+      <DependentUpon>A_1_4_RegistrarPais.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_3_RegistrarProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_3_RegistrarProvincia.Designer.cs">
+      <DependentUpon>A_1_3_RegistrarProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_5_RegistrarConvenio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_5_RegistrarConvenio.Designer.cs">
+      <DependentUpon>A_1_5_RegistrarConvenio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_6_RegistrarJornada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_6_RegistrarJornada.Designer.cs">
+      <DependentUpon>A_1_6_RegistrarJornada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_6_RegistrarLicencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_6_RegistrarLicencia.Designer.cs">
+      <DependentUpon>A_1_6_RegistrarLicencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_8_RegistrarPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_8_RegistrarPuesto.Designer.cs">
+      <DependentUpon>A_1_8_RegistrarPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9.1_RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9.1_RegistrarUsuario.Designer.cs">
+      <DependentUpon>A_1_9.1_RegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9_2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9_2_1.Designer.cs">
+      <DependentUpon>A_1_9_2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9_RegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\A_1_9_RegistrarUsuario.Designer.cs">
+      <DependentUpon>A_1_9_RegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\cambioClave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\cambioClave.Designer.cs">
+      <DependentUpon>cambioClave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet121.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet121.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet26.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet27.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet27.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet28.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet28.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet29.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet29.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet30.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet30.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet39.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet44.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet45.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet46.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet47.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet48.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet49.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet52.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet53.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet54.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet54.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet55.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet55.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet56.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet56.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet57.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet57.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet58.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet58.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet59.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet59.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet60.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet60.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet61.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet62.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet62.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet63.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet63.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet64.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet64.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet65.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet65.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet66.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet66.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet67.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet67.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet68.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet68.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet69.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet69.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet70.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet70.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet71.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet71.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet72.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet72.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet73.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet73.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet74.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet74.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet75.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet75.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet76.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet76.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet77.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet77.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet78.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet78.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet79.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet79.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet80.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet80.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DATASET\ChronosDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChronosDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\01-ContenedorRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ADMIN\01-ContenedorRegistrarUsuario.Designer.cs">
+      <DependentUpon>01-ContenedorRegistrarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM\ImprimirCertifi-ABM-03_01.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM\ImprimirCertifi-ABM-03_01.Designer.cs">
+      <DependentUpon>ImprimirCertifi-ABM-03_01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN-1_3_GenerarCertificadoTrabajo1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LN-1_3_GenerarCertificadoTrabajo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN-ContenedorLicencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\LN-ContenedorLicencia.Designer.cs">
+      <DependentUpon>LN-ContenedorLicencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN_1-RegistrarCertificado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\LN_1-RegistrarCertificado.Designer.cs">
+      <DependentUpon>LN_1-RegistrarCertificado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN_2_ActualizarCertificado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\LN_2_ActualizarCertificado.Designer.cs">
+      <DependentUpon>LN_2_ActualizarCertificado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LN\LN_4_Gene_Reporte_Licencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LN\LN_4_Gene_Reporte_Licencias.Designer.cs">
+      <DependentUpon>LN_4_Gene_Reporte_Licencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CLASE\Procedimientos.cs" />
+    <Compile Include="CLASE\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CLASE\_03_Sesion_ABM.cs" />
+    <Compile Include="DATASET\Puesto_DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Puesto_DataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ABM\ABM-8_RegistrarHistEmpleado.resx">
+      <DependentUpon>ABM-8_RegistrarHistEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\01-Inicio_Secion.resx">
+      <DependentUpon>01-Inicio_Secion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\02-ContenedorRegistrarEmpresa.resx">
+      <DependentUpon>02-ContenedorRegistrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\02-Sesion_Administrador.resx">
+      <DependentUpon>02-Sesion_Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\03-ContenedorRegistrarSite.resx">
+      <DependentUpon>03-ContenedorRegistrarSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\03_Sesion_ABM.resx">
+      <DependentUpon>03_Sesion_ABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\04-Gestion_de_Tiempo.resx">
+      <DependentUpon>04-Gestion_de_Tiempo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\05-GestionLicencia_y_Novedades.resx">
+      <DependentUpon>05-GestionLicencia_y_Novedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\ABM-2_ConsultarEmpleado.resx">
+      <DependentUpon>ABM-2_ConsultarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\ABM-1_RegistrarEmpleado.resx">
+      <DependentUpon>ABM-1_RegistrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\ABM-6_RegistrarSueldoBejerman.resx">
+      <DependentUpon>ABM-6_RegistrarSueldoBejerman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\Imprime_LN_4_Gen_Repor.resx">
+      <DependentUpon>Imprime_LN_4_Gen_Repor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\Imprime_RPT_LN_4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Imprime_RPT_LN_4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\LN-1_3_GenerarCertificadoTrabajo.resx">
+      <DependentUpon>LN-1_3_GenerarCertificadoTrabajo.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LN-1_3_GenerarCertificadoTrabajo1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_10_EliminarUsuario.resx">
+      <DependentUpon>A_1_10_EliminarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_11_RegistrarPerfil.resx">
+      <DependentUpon>A_1_11_RegistrarPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_12_RegistrarArea.resx">
+      <DependentUpon>A_1_12_RegistrarArea.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_13-EliminarEmpresa.resx">
+      <DependentUpon>A_1_13-EliminarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_13_1-RegistrarEmpresa.resx">
+      <DependentUpon>A_1_13_1-RegistrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_13_RegistrarEmpresa.resx">
+      <DependentUpon>A_1_13_RegistrarEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_14-RegistrarSite.resx">
+      <DependentUpon>A_1_14-RegistrarSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_14_1-EliminarSite.resx">
+      <DependentUpon>A_1_14_1-EliminarSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_14_2-ActualizarSite.resx">
+      <DependentUpon>A_1_14_2-ActualizarSite.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_15_RegistrarDepartamento.resx">
+      <DependentUpon>A_1_15_RegistrarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_1_RegistrarBarrio.resx">
+      <DependentUpon>A_1_1_RegistrarBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_2_RegistrarLocalidad.resx">
+      <DependentUpon>A_1_2_RegistrarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_3_RegistrarProvincia.resx">
+      <DependentUpon>A_1_3_RegistrarProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_4_RegistrarPais.resx">
+      <DependentUpon>A_1_4_RegistrarPais.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_5_RegistrarConvenio.resx">
+      <DependentUpon>A_1_5_RegistrarConvenio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_6_RegistrarJornada.resx">
+      <DependentUpon>A_1_6_RegistrarJornada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_6_RegistrarLicencia.resx">
+      <DependentUpon>A_1_6_RegistrarLicencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_8_RegistrarPuesto.resx">
+      <DependentUpon>A_1_8_RegistrarPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_9.1_RegistrarUsuario.resx">
+      <DependentUpon>A_1_9.1_RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_9_2_1.resx">
+      <DependentUpon>A_1_9_2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\A_1_9_RegistrarUsuario.resx">
+      <DependentUpon>A_1_9_RegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\cambioClave.resx">
+      <DependentUpon>cambioClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ADMIN\01-ContenedorRegistrarUsuario.resx">
+      <DependentUpon>01-ContenedorRegistrarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM\ImprimirCertifi-ABM-03_01.resx">
+      <DependentUpon>ImprimirCertifi-ABM-03_01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\ImprirCertificadoTrabajo.rdlc" />
+    <EmbeddedResource Include="LN\LN-ContenedorLicencia.resx">
+      <DependentUpon>LN-ContenedorLicencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\LN_1-RegistrarCertificado.resx">
+      <DependentUpon>LN_1-RegistrarCertificado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\LN_2_ActualizarCertificado.resx">
+      <DependentUpon>LN_2_ActualizarCertificado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LN\LN_4_Gene_Reporte_Licencias.resx">
+      <DependentUpon>LN_4_Gene_Reporte_Licencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DATASET\Celula_DataSet.xsc">
+      <DependentUpon>Celula_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Celula_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Celula_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Celula_DataSet.xss">
+      <DependentUpon>Celula_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet.xsc">
+      <DependentUpon>ChronosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet.xss">
+      <DependentUpon>ChronosDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet1.xsc">
+      <DependentUpon>ChronosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet1.xss">
+      <DependentUpon>ChronosDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet10.xsc">
+      <DependentUpon>ChronosDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet10.xss">
+      <DependentUpon>ChronosDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet111.xsc">
+      <DependentUpon>ChronosDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet111.xss">
+      <DependentUpon>ChronosDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet121.xsc">
+      <DependentUpon>ChronosDataSet121.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet121.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet121.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet121.xss">
+      <DependentUpon>ChronosDataSet121.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet13.xsc">
+      <DependentUpon>ChronosDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet13.xss">
+      <DependentUpon>ChronosDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet14.xsc">
+      <DependentUpon>ChronosDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet14.xss">
+      <DependentUpon>ChronosDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet15.xsc">
+      <DependentUpon>ChronosDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet15.xss">
+      <DependentUpon>ChronosDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet16.xsc">
+      <DependentUpon>ChronosDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet16.xss">
+      <DependentUpon>ChronosDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet17.xsc">
+      <DependentUpon>ChronosDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet17.xss">
+      <DependentUpon>ChronosDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet18.xsc">
+      <DependentUpon>ChronosDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet18.xss">
+      <DependentUpon>ChronosDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet19.xsc">
+      <DependentUpon>ChronosDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet19.xss">
+      <DependentUpon>ChronosDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet2.xsc">
+      <DependentUpon>ChronosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet2.xss">
+      <DependentUpon>ChronosDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet20.xsc">
+      <DependentUpon>ChronosDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet20.xss">
+      <DependentUpon>ChronosDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet21.xsc">
+      <DependentUpon>ChronosDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet21.xss">
+      <DependentUpon>ChronosDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet22.xsc">
+      <DependentUpon>ChronosDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet22.xss">
+      <DependentUpon>ChronosDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet23.xsc">
+      <DependentUpon>ChronosDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet23.xss">
+      <DependentUpon>ChronosDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet24.xsc">
+      <DependentUpon>ChronosDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet24.xss">
+      <DependentUpon>ChronosDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet25.xsc">
+      <DependentUpon>ChronosDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet25.xss">
+      <DependentUpon>ChronosDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet26.xsc">
+      <DependentUpon>ChronosDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet26.xss">
+      <DependentUpon>ChronosDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet27.xsc">
+      <DependentUpon>ChronosDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet27.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet27.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet27.xss">
+      <DependentUpon>ChronosDataSet27.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet28.xsc">
+      <DependentUpon>ChronosDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet28.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet28.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet28.xss">
+      <DependentUpon>ChronosDataSet28.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet29.xsc">
+      <DependentUpon>ChronosDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet29.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet29.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet29.xss">
+      <DependentUpon>ChronosDataSet29.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet3.xsc">
+      <DependentUpon>ChronosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet3.xss">
+      <DependentUpon>ChronosDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet30.xsc">
+      <DependentUpon>ChronosDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet30.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet30.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet30.xss">
+      <DependentUpon>ChronosDataSet30.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet31.xsc">
+      <DependentUpon>ChronosDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet31.xss">
+      <DependentUpon>ChronosDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet32.xsc">
+      <DependentUpon>ChronosDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet32.xss">
+      <DependentUpon>ChronosDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet33.xsc">
+      <DependentUpon>ChronosDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet33.xss">
+      <DependentUpon>ChronosDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet34.xsc">
+      <DependentUpon>ChronosDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet34.xss">
+      <DependentUpon>ChronosDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet35.xsc">
+      <DependentUpon>ChronosDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet35.xss">
+      <DependentUpon>ChronosDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet36.xsc">
+      <DependentUpon>ChronosDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet36.xss">
+      <DependentUpon>ChronosDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet37.xsc">
+      <DependentUpon>ChronosDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet37.xss">
+      <DependentUpon>ChronosDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet38.xsc">
+      <DependentUpon>ChronosDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet38.xss">
+      <DependentUpon>ChronosDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet39.xsc">
+      <DependentUpon>ChronosDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet39.xss">
+      <DependentUpon>ChronosDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet4.xsc">
+      <DependentUpon>ChronosDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet4.xss">
+      <DependentUpon>ChronosDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet40.xsc">
+      <DependentUpon>ChronosDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet40.xss">
+      <DependentUpon>ChronosDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet41.xsc">
+      <DependentUpon>ChronosDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet41.xss">
+      <DependentUpon>ChronosDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet42.xsc">
+      <DependentUpon>ChronosDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet42.xss">
+      <DependentUpon>ChronosDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet43.xsc">
+      <DependentUpon>ChronosDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet43.xss">
+      <DependentUpon>ChronosDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet44.xsc">
+      <DependentUpon>ChronosDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet44.xss">
+      <DependentUpon>ChronosDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet45.xsc">
+      <DependentUpon>ChronosDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet45.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet45.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet45.xss">
+      <DependentUpon>ChronosDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet46.xsc">
+      <DependentUpon>ChronosDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet46.xss">
+      <DependentUpon>ChronosDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet47.xsc">
+      <DependentUpon>ChronosDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet47.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet47.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet47.xss">
+      <DependentUpon>ChronosDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet48.xsc">
+      <DependentUpon>ChronosDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet48.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet48.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet48.xss">
+      <DependentUpon>ChronosDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet49.xsc">
+      <DependentUpon>ChronosDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet49.xss">
+      <DependentUpon>ChronosDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet5.xsc">
+      <DependentUpon>ChronosDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet5.xss">
+      <DependentUpon>ChronosDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet50.xsc">
+      <DependentUpon>ChronosDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet50.xss">
+      <DependentUpon>ChronosDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet51.xsc">
+      <DependentUpon>ChronosDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet51.xss">
+      <DependentUpon>ChronosDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet52.xsc">
+      <DependentUpon>ChronosDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet52.xss">
+      <DependentUpon>ChronosDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet53.xsc">
+      <DependentUpon>ChronosDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet53.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet53.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet53.xss">
+      <DependentUpon>ChronosDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet54.xsc">
+      <DependentUpon>ChronosDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet54.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet54.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet54.xss">
+      <DependentUpon>ChronosDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet55.xsc">
+      <DependentUpon>ChronosDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet55.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet55.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet55.xss">
+      <DependentUpon>ChronosDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet56.xsc">
+      <DependentUpon>ChronosDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet56.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet56.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet56.xss">
+      <DependentUpon>ChronosDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet57.xsc">
+      <DependentUpon>ChronosDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet57.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet57.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet57.xss">
+      <DependentUpon>ChronosDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet58.xsc">
+      <DependentUpon>ChronosDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet58.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet58.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet58.xss">
+      <DependentUpon>ChronosDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet59.xsc">
+      <DependentUpon>ChronosDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet59.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet59.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet59.xss">
+      <DependentUpon>ChronosDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet6.xsc">
+      <DependentUpon>ChronosDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet6.xss">
+      <DependentUpon>ChronosDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet60.xsc">
+      <DependentUpon>ChronosDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet60.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet60.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet60.xss">
+      <DependentUpon>ChronosDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet61.xsc">
+      <DependentUpon>ChronosDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet61.xss">
+      <DependentUpon>ChronosDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet62.xsc">
+      <DependentUpon>ChronosDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet62.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet62.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet62.xss">
+      <DependentUpon>ChronosDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet63.xsc">
+      <DependentUpon>ChronosDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet63.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet63.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet63.xss">
+      <DependentUpon>ChronosDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet64.xsc">
+      <DependentUpon>ChronosDataSet64.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet64.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet64.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet64.xss">
+      <DependentUpon>ChronosDataSet64.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet65.xsc">
+      <DependentUpon>ChronosDataSet65.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet65.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet65.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet65.xss">
+      <DependentUpon>ChronosDataSet65.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet66.xsc">
+      <DependentUpon>ChronosDataSet66.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet66.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet66.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet66.xss">
+      <DependentUpon>ChronosDataSet66.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet67.xsc">
+      <DependentUpon>ChronosDataSet67.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet67.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet67.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet67.xss">
+      <DependentUpon>ChronosDataSet67.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet68.xsc">
+      <DependentUpon>ChronosDataSet68.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet68.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet68.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet68.xss">
+      <DependentUpon>ChronosDataSet68.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet69.xsc">
+      <DependentUpon>ChronosDataSet69.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet69.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet69.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet69.xss">
+      <DependentUpon>ChronosDataSet69.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet7.xsc">
+      <DependentUpon>ChronosDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet7.xss">
+      <DependentUpon>ChronosDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet70.xsc">
+      <DependentUpon>ChronosDataSet70.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet70.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet70.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet70.xss">
+      <DependentUpon>ChronosDataSet70.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet71.xsc">
+      <DependentUpon>ChronosDataSet71.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet71.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet71.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet71.xss">
+      <DependentUpon>ChronosDataSet71.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet72.xsc">
+      <DependentUpon>ChronosDataSet72.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet72.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet72.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet72.xss">
+      <DependentUpon>ChronosDataSet72.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet73.xsc">
+      <DependentUpon>ChronosDataSet73.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet73.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet73.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet73.xss">
+      <DependentUpon>ChronosDataSet73.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet74.xsc">
+      <DependentUpon>ChronosDataSet74.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet74.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet74.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet74.xss">
+      <DependentUpon>ChronosDataSet74.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet75.xsc">
+      <DependentUpon>ChronosDataSet75.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet75.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet75.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet75.xss">
+      <DependentUpon>ChronosDataSet75.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet76.xsc">
+      <DependentUpon>ChronosDataSet76.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet76.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet76.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet76.xss">
+      <DependentUpon>ChronosDataSet76.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet77.xsc">
+      <DependentUpon>ChronosDataSet77.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet77.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet77.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet77.xss">
+      <DependentUpon>ChronosDataSet77.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet78.xsc">
+      <DependentUpon>ChronosDataSet78.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet78.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet78.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet78.xss">
+      <DependentUpon>ChronosDataSet78.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet79.xsc">
+      <DependentUpon>ChronosDataSet79.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet79.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet79.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet79.xss">
+      <DependentUpon>ChronosDataSet79.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet8.xsc">
+      <DependentUpon>ChronosDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet8.xss">
+      <DependentUpon>ChronosDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet80.xsc">
+      <DependentUpon>ChronosDataSet80.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet80.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet80.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet80.xss">
+      <DependentUpon>ChronosDataSet80.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet81.xsc">
+      <DependentUpon>ChronosDataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet81.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet81.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet81.xss">
+      <DependentUpon>ChronosDataSet81.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet82.xsc">
+      <DependentUpon>ChronosDataSet82.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet82.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet82.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet82.xss">
+      <DependentUpon>ChronosDataSet82.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet83.xsc">
+      <DependentUpon>ChronosDataSet83.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet83.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet83.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet83.xss">
+      <DependentUpon>ChronosDataSet83.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet84.xsc">
+      <DependentUpon>ChronosDataSet84.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet84.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet84.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet84.xss">
+      <DependentUpon>ChronosDataSet84.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet85.xsc">
+      <DependentUpon>ChronosDataSet85.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet85.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet85.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet85.xss">
+      <DependentUpon>ChronosDataSet85.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet86.xsc">
+      <DependentUpon>ChronosDataSet86.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet86.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet86.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet86.xss">
+      <DependentUpon>ChronosDataSet86.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet87.xsc">
+      <DependentUpon>ChronosDataSet87.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet87.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet87.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet87.xss">
+      <DependentUpon>ChronosDataSet87.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet88.xsc">
+      <DependentUpon>ChronosDataSet88.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet88.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet88.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet88.xss">
+      <DependentUpon>ChronosDataSet88.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet89.xsc">
+      <DependentUpon>ChronosDataSet89.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet89.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet89.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet89.xss">
+      <DependentUpon>ChronosDataSet89.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet9.xsc">
+      <DependentUpon>ChronosDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet9.xss">
+      <DependentUpon>ChronosDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet90.xsc">
+      <DependentUpon>ChronosDataSet90.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet90.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet90.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet90.xss">
+      <DependentUpon>ChronosDataSet90.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet91.xsc">
+      <DependentUpon>ChronosDataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet91.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet91.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet91.xss">
+      <DependentUpon>ChronosDataSet91.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet92.xsc">
+      <DependentUpon>ChronosDataSet92.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet92.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet92.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet92.xss">
+      <DependentUpon>ChronosDataSet92.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet93.xsc">
+      <DependentUpon>ChronosDataSet93.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet93.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet93.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet93.xss">
+      <DependentUpon>ChronosDataSet93.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet_Sueldos.xsc">
+      <DependentUpon>ChronosDataSet_Sueldos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\ChronosDataSet_Sueldos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChronosDataSet_Sueldos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\ChronosDataSet_Sueldos.xss">
+      <DependentUpon>ChronosDataSet_Sueldos.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Convenio_DataSet.xsc">
+      <DependentUpon>Convenio_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Convenio_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Convenio_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Convenio_DataSet.xss">
+      <DependentUpon>Convenio_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_TablaEmpleado.xsc">
+      <DependentUpon>DS_TablaEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\DS_TablaEmpleado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_TablaEmpleado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\DS_TablaEmpleado.xss">
+      <DependentUpon>DS_TablaEmpleado.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Empleados_DataSet.xsc">
+      <DependentUpon>Empleados_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Empleados_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Empleados_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Empleados_DataSet.xss">
+      <DependentUpon>Empleados_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Empresa_DataSet.xsc">
+      <DependentUpon>Empresa_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Empresa_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Empresa_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Empresa_DataSet.xss">
+      <DependentUpon>Empresa_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Estado_DataSet.xsc">
+      <DependentUpon>Estado_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Estado_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Estado_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Estado_DataSet.xss">
+      <DependentUpon>Estado_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Jornada_DataSet.xsc">
+      <DependentUpon>Jornada_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Jornada_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Jornada_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Jornada_DataSet.xss">
+      <DependentUpon>Jornada_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\MovimientoEmpleados_DataSet.xsc">
+      <DependentUpon>MovimientoEmpleados_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\MovimientoEmpleados_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MovimientoEmpleados_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\MovimientoEmpleados_DataSet.xss">
+      <DependentUpon>MovimientoEmpleados_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Site_DataSet.xsc">
+      <DependentUpon>Site_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Site_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Site_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Site_DataSet.xss">
+      <DependentUpon>Site_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Usuario_DataSet.xsc">
+      <DependentUpon>Usuario_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Usuario_DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Usuario_DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DATASET\Usuario_DataSet.xss">
+      <DependentUpon>Usuario_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LN\Imprimir_DataSet_LN4.xsc">
+      <DependentUpon>Imprimir_DataSet_LN4.xsd</DependentUpon>
+    </None>
+    <None Include="LN\Imprimir_DataSet_LN4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Imprimir_DataSet_LN4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="LN\Imprimir_DataSet_LN4.xss">
+      <DependentUpon>Imprimir_DataSet_LN4.xsd</DependentUpon>
+    </None>
+    <None Include="LN\Legajo_Certificado.xsc">
+      <DependentUpon>Legajo_Certificado.xsd</DependentUpon>
+    </None>
+    <None Include="LN\Legajo_Certificado.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Legajo_Certificado.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LN\Legajo_Certificado.xss">
+      <DependentUpon>Legajo_Certificado.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DATASET\Puesto_DataSet.xsc">
+      <DependentUpon>Puesto_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DATASET\Puesto_DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Puesto_DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DATASET\Puesto_DataSet.xss">
+      <DependentUpon>Puesto_DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Fondo de Chronos_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\X.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hhhh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hhhh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yyyy.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo de Chronos_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo de Chronos_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Verde Sin Fon6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo Gris1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gris2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miniAvatar1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul Sin Fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul Sin Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fondo Gris1_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul Sin Fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naranja Sin fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rojo Sin fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga %288%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa  04 Sin Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Impresora Sin Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rojo Sin fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Naranja Sin fondo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-20160711-WA0001.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo 2015.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meditel-nvologo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Firma.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Azul Sin Fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
