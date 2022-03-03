@@ -58,7 +58,7 @@ namespace MenuInicio
 
         private void button5_Click(object sender, EventArgs e)
         {
-            SqlCommand select = new SqlCommand("SELECT * FROM [dbo].[movimientoEmpleados] WHERE legajo = @legajo AND idEstado <> 2 AND  idMovimientoEmpleado = (SELECT MAX(idMovimientoEmpleado) FROM [dbo].[movimientoEmpleados])", conex);
+            SqlCommand select = new SqlCommand("SELECT A.idMovimientoEmpleado,A.legajo,idPuesto,idDepartamento,idArea,idSite,idCelula,idJornada,idConvenio,horarioEntrada,horarioSalida,idUsuario,idEstado,motivoBaja,fechaDesde,fechaHasta FROM movimientoEmpleados AS A INNER JOIN ( SELECT legajo,MAX(idMovimientoEmpleado) AS idMovimientoEmpleado FROM movimientoEmpleados WHERE idEstado NOT IN (2,-1) AND legajo = @legajo GROUP BY legajo) AS B ON A.legajo=B.legajo AND A.idMovimientoEmpleado=B.idMovimientoEmpleado", conex);
             SqlDataAdapter adaptador = new SqlDataAdapter();
             DataSet data;
             adaptador.SelectCommand = select;
@@ -70,6 +70,41 @@ namespace MenuInicio
                 conex.Open();
                 adaptador.SelectCommand.Parameters["@legajo"].Value = comboBox1.SelectedValue;
                 
+                data = new DataSet();
+                adaptador.Fill(data, "MovimientoEmpleado");
+                DataRow fila = data.Tables["MovimientoEmpleado"].Rows[0];
+                
+                comboBox3.SelectedValue = fila.ItemArray[2].ToString();
+                comboBox2.SelectedValue = fila.ItemArray[8].ToString();
+                comboBox8.SelectedValue = fila.ItemArray[5].ToString();
+                comboBox6.SelectedValue = fila.ItemArray[7].ToString();
+                comboBox5.SelectedValue = fila.ItemArray[12].ToString();
+                comboBox7.SelectedValue = fila.ItemArray[11].ToString();
+                comboBox9.SelectedValue = fila.ItemArray[8].ToString();
+                dateTimePicker1.Text = fila.ItemArray[14].ToString();
+                dateTimePicker2.Text = fila.ItemArray[15].ToString();
+                //textBox2.Text = fila.ItemArray[2].ToString();
+                //comboBox11.SelectedValue = fila.ItemArray[6];
+
+                //textBox7.Text = fila.ItemArray[24].ToString();
+                //comboBox10.SelectedValue = fila.ItemArray[4];
+                //textBox3.Text = fila.ItemArray[5].ToString();
+                //textBox4.Text = fila.ItemArray[10].ToString();
+                //comboBox2.SelectedValue = fila.ItemArray[9];
+                //textBox5.Text = fila.ItemArray[7].ToString();
+                //textBox6.Text = fila.ItemArray[8].ToString();
+                //comboBox1.SelectedValue = fila.ItemArray[16];
+                //comboBox3.SelectedValue = fila.ItemArray[23];
+                //comboBox4.SelectedValue = fila.ItemArray[17];
+                //textBox8.Text = fila.ItemArray[1].ToString();
+                
+                //comboBox5.SelectedValue = fila.ItemArray[20];
+                //comboBox6.SelectedValue = fila.ItemArray[18];
+                //textBox9.Text = fila.ItemArray[11].ToString();
+                //comboBox7.SelectedValue = fila.ItemArray[19];
+                //comboBox8.SelectedValue = fila.ItemArray[21];
+                //comboBox9.SelectedValue = fila.ItemArray[22];
+
                 //textBox10.Enabled = true;
                 //textBox2.Enabled = true;
                 //textBox3.Enabled = true;
@@ -94,40 +129,6 @@ namespace MenuInicio
                 //pictureBox1.Enabled = true;
                 //button6.Enabled = true;
                 //button4.Enabled = true;
-
-                //data = new DataSet();
-                //adaptador.Fill(data, "empleados");
-                //DataRow fila = data.Tables["empleados"].Rows[0];
-                //byte[] imagen = new byte[0];
-                //imagen = (byte[])fila["foto"];
-                //System.IO.MemoryStream img = new System.IO.MemoryStream(imagen);
-                //pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-                //pictureBox1.Image = System.Drawing.Bitmap.FromStream(img);
-
-
-                //label26.Text = fila.ItemArray[0].ToString();
-                //textBox10.Text = fila.ItemArray[3].ToString();
-                //textBox2.Text = fila.ItemArray[2].ToString();
-                //comboBox11.SelectedValue = fila.ItemArray[6];
-
-                //textBox7.Text = fila.ItemArray[24].ToString();
-                //comboBox10.SelectedValue = fila.ItemArray[4];
-                //textBox3.Text = fila.ItemArray[5].ToString();
-                //textBox4.Text = fila.ItemArray[10].ToString();
-                //comboBox2.SelectedValue = fila.ItemArray[9];
-                //textBox5.Text = fila.ItemArray[7].ToString();
-                //textBox6.Text = fila.ItemArray[8].ToString();
-                //comboBox1.SelectedValue = fila.ItemArray[16];
-                //comboBox3.SelectedValue = fila.ItemArray[23];
-                //comboBox4.SelectedValue = fila.ItemArray[17];
-                //textBox8.Text = fila.ItemArray[1].ToString();
-                //dateTimePicker1.Text = fila.ItemArray[12].ToString();
-                //comboBox5.SelectedValue = fila.ItemArray[20];
-                //comboBox6.SelectedValue = fila.ItemArray[18];
-                //textBox9.Text = fila.ItemArray[11].ToString();
-                //comboBox7.SelectedValue = fila.ItemArray[19];
-                //comboBox8.SelectedValue = fila.ItemArray[21];
-                //comboBox9.SelectedValue = fila.ItemArray[22];
 
 
             }

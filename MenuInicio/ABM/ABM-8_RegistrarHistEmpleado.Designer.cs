@@ -44,15 +44,12 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.conveniosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.convenio_DataSet = new MenuInicio.DATASET.Convenio_DataSet();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.puestosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.puesto_DataSet1 = new MenuInicio.DATASET.Puesto_DataSet();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.empresasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.empresa_DataSet = new MenuInicio.DATASET.Empresa_DataSet();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.estadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.estado_DataSet = new MenuInicio.DATASET.Estado_DataSet();
@@ -98,6 +95,11 @@
             this.jornadasTableAdapter = new MenuInicio.DATASET.Jornada_DataSetTableAdapters.jornadasTableAdapter();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.movimientoEmpleadosTableAdapter = new MenuInicio.DATASET.MovimientoEmpleados_DataSetTableAdapters.movimientoEmpleadosTableAdapter();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleados_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource)).BeginInit();
@@ -196,7 +198,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(21, 80);
+            this.label1.Location = new System.Drawing.Point(7, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 15);
             this.label1.TabIndex = 222;
@@ -207,10 +209,10 @@
             this.comboBox1.DataSource = this.movimientoEmpleadosBindingSource1;
             this.comboBox1.DisplayMember = "legajo";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 77);
+            this.comboBox1.Location = new System.Drawing.Point(78, 77);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 223;
+            this.comboBox1.TabIndex = 1;
             this.comboBox1.ValueMember = "legajo";
             // 
             // movimientoEmpleadosBindingSource1
@@ -244,10 +246,10 @@
             this.comboBox2.DisplayMember = "descripcion";
             this.comboBox2.Enabled = false;
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(484, 158);
+            this.comboBox2.Location = new System.Drawing.Point(288, 155);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 23);
-            this.comboBox2.TabIndex = 225;
+            this.comboBox2.TabIndex = 4;
             this.comboBox2.ValueMember = "idConvenio";
             // 
             // conveniosBindingSource
@@ -260,28 +262,16 @@
             this.convenio_DataSet.DataSetName = "Convenio_DataSet";
             this.convenio_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(415, 162);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 15);
-            this.label2.TabIndex = 224;
-            this.label2.Text = "CONVENIO";
-            // 
             // comboBox3
             // 
             this.comboBox3.DataSource = this.puestosBindingSource;
             this.comboBox3.DisplayMember = "descripcion";
             this.comboBox3.Enabled = false;
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(93, 156);
+            this.comboBox3.Location = new System.Drawing.Point(78, 155);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 23);
-            this.comboBox3.TabIndex = 227;
+            this.comboBox3.TabIndex = 2;
             this.comboBox3.ValueMember = "idPuesto";
             this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
@@ -301,23 +291,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(23, 159);
+            this.label3.Location = new System.Drawing.Point(7, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 15);
             this.label3.TabIndex = 226;
             this.label3.Text = "PUESTO";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.DataSource = this.empresasBindingSource;
-            this.comboBox4.DisplayMember = "razonSocial";
-            this.comboBox4.Enabled = false;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(288, 156);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 23);
-            this.comboBox4.TabIndex = 229;
-            this.comboBox4.ValueMember = "idEmpresa";
             // 
             // empresasBindingSource
             // 
@@ -329,28 +307,16 @@
             this.empresa_DataSet.DataSetName = "Empresa_DataSet";
             this.empresa_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(217, 161);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 15);
-            this.label4.TabIndex = 228;
-            this.label4.Text = "EMPRESA";
-            // 
             // comboBox5
             // 
             this.comboBox5.DataSource = this.estadosBindingSource;
             this.comboBox5.DisplayMember = "descripcion";
             this.comboBox5.Enabled = false;
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(288, 217);
+            this.comboBox5.Location = new System.Drawing.Point(78, 206);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 23);
-            this.comboBox5.TabIndex = 237;
+            this.comboBox5.TabIndex = 7;
             this.comboBox5.ValueMember = "idEstado";
             // 
             // estadosBindingSource
@@ -369,7 +335,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(217, 220);
+            this.label6.Location = new System.Drawing.Point(7, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 15);
             this.label6.TabIndex = 236;
@@ -381,10 +347,10 @@
             this.comboBox6.DisplayMember = "descripcion";
             this.comboBox6.Enabled = false;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(93, 217);
+            this.comboBox6.Location = new System.Drawing.Point(693, 156);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(121, 23);
-            this.comboBox6.TabIndex = 235;
+            this.comboBox6.TabIndex = 6;
             this.comboBox6.ValueMember = "idJornada";
             // 
             // jornadasBindingSource
@@ -408,7 +374,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(23, 220);
+            this.label7.Location = new System.Drawing.Point(607, 159);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 15);
             this.label7.TabIndex = 234;
@@ -420,10 +386,10 @@
             this.comboBox7.DisplayMember = "nombre";
             this.comboBox7.Enabled = false;
             this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(484, 217);
+            this.comboBox7.Location = new System.Drawing.Point(286, 206);
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(121, 23);
-            this.comboBox7.TabIndex = 233;
+            this.comboBox7.TabIndex = 8;
             this.comboBox7.ValueMember = "idUsuario";
             // 
             // usuariosBindingSource
@@ -442,7 +408,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(415, 220);
+            this.label8.Location = new System.Drawing.Point(217, 209);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(63, 15);
             this.label8.TabIndex = 232;
@@ -451,13 +417,13 @@
             // comboBox8
             // 
             this.comboBox8.DataSource = this.siteBindingSource;
-            this.comboBox8.DisplayMember = "nombre";
+            this.comboBox8.DisplayMember = "descripcion";
             this.comboBox8.Enabled = false;
             this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(671, 159);
+            this.comboBox8.Location = new System.Drawing.Point(475, 156);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(121, 23);
-            this.comboBox8.TabIndex = 231;
+            this.comboBox8.TabIndex = 5;
             this.comboBox8.ValueMember = "idSite";
             // 
             // siteBindingSource
@@ -481,7 +447,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(611, 162);
+            this.label9.Location = new System.Drawing.Point(415, 159);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(33, 15);
             this.label9.TabIndex = 230;
@@ -493,10 +459,10 @@
             this.comboBox9.DisplayMember = "CELU-nombre";
             this.comboBox9.Enabled = false;
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(672, 217);
+            this.comboBox9.Location = new System.Drawing.Point(474, 206);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(121, 23);
-            this.comboBox9.TabIndex = 239;
+            this.comboBox9.TabIndex = 9;
             this.comboBox9.ValueMember = "CELU-idCelula";
             // 
             // celulasBindingSource
@@ -515,7 +481,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(611, 220);
+            this.label10.Location = new System.Drawing.Point(413, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 15);
             this.label10.TabIndex = 238;
@@ -528,10 +494,10 @@
             this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(118, 277);
+            this.dateTimePicker1.Location = new System.Drawing.Point(102, 325);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(96, 22);
-            this.dateTimePicker1.TabIndex = 241;
+            this.dateTimePicker1.Size = new System.Drawing.Size(99, 22);
+            this.dateTimePicker1.TabIndex = 13;
             this.dateTimePicker1.Value = new System.DateTime(2017, 9, 16, 0, 0, 0, 0);
             // 
             // label11
@@ -540,7 +506,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(23, 283);
+            this.label11.Location = new System.Drawing.Point(7, 331);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 15);
             this.label11.TabIndex = 242;
@@ -552,7 +518,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(220, 283);
+            this.label12.Location = new System.Drawing.Point(7, 373);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 15);
             this.label12.TabIndex = 243;
@@ -565,10 +531,10 @@
             this.dateTimePicker2.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(320, 277);
+            this.dateTimePicker2.Location = new System.Drawing.Point(102, 367);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(89, 22);
-            this.dateTimePicker2.TabIndex = 244;
+            this.dateTimePicker2.Size = new System.Drawing.Size(99, 22);
+            this.dateTimePicker2.TabIndex = 14;
             this.dateTimePicker2.Value = new System.DateTime(2017, 9, 16, 0, 0, 0, 0);
             // 
             // label14
@@ -577,7 +543,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(415, 277);
+            this.label14.Location = new System.Drawing.Point(417, 269);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(61, 15);
             this.label14.TabIndex = 245;
@@ -586,11 +552,11 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(484, 274);
+            this.textBox1.Location = new System.Drawing.Point(484, 264);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 130);
-            this.textBox1.TabIndex = 246;
+            this.textBox1.Size = new System.Drawing.Size(330, 130);
+            this.textBox1.TabIndex = 12;
             // 
             // empleadosTableAdapter1
             // 
@@ -672,6 +638,58 @@
             // 
             this.movimientoEmpleadosTableAdapter.ClearBeforeFill = true;
             // 
+            // label13
+            // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Location = new System.Drawing.Point(7, 264);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 15);
+            this.label13.TabIndex = 248;
+            this.label13.Text = "ENTRADA";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(217, 264);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 15);
+            this.label15.TabIndex = 249;
+            this.label15.Text = "SALIDA";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(78, 261);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 22);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(286, 261);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(120, 22);
+            this.textBox3.TabIndex = 11;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(217, 159);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 15);
+            this.label2.TabIndex = 224;
+            this.label2.Text = "CONVENIO";
+            // 
             // ABM_8_RegistrarHistEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -680,6 +698,10 @@
             this.BackgroundImage = global::MenuInicio.Properties.Resources.Fondo_Gris1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1169, 580);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label14);
@@ -697,8 +719,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.comboBox8);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboBox2);
@@ -758,11 +778,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox6;
@@ -823,5 +840,10 @@
         private System.Windows.Forms.BindingSource movimientoEmpleadosBindingSource;
         private DATASET.MovimientoEmpleados_DataSetTableAdapters.movimientoEmpleadosTableAdapter movimientoEmpleadosTableAdapter;
         private System.Windows.Forms.BindingSource movimientoEmpleadosBindingSource1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
     }
 }
