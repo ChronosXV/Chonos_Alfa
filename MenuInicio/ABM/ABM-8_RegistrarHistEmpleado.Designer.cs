@@ -97,9 +97,9 @@
             this.movimientoEmpleadosTableAdapter = new MenuInicio.DATASET.MovimientoEmpleados_DataSetTableAdapters.movimientoEmpleadosTableAdapter();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleados_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource)).BeginInit();
@@ -144,8 +144,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(116, 44);
             this.button1.TabIndex = 78;
-            this.button1.Text = "Actulizar";
+            this.button1.Text = "Actualizar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -662,22 +663,6 @@
             this.label15.TabIndex = 249;
             this.label15.Text = "SALIDA";
             // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(78, 261);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 22);
-            this.textBox2.TabIndex = 10;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(286, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 22);
-            this.textBox3.TabIndex = 11;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -690,6 +675,34 @@
             this.label2.TabIndex = 224;
             this.label2.Text = "CONVENIO";
             // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dateTimePicker4.CustomFormat = "yyyy-mm-dd";
+            this.dateTimePicker4.Enabled = false;
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker4.Location = new System.Drawing.Point(286, 261);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.ShowUpDown = true;
+            this.dateTimePicker4.Size = new System.Drawing.Size(123, 22);
+            this.dateTimePicker4.TabIndex = 251;
+            this.dateTimePicker4.Value = new System.DateTime(2017, 9, 16, 0, 0, 0, 0);
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dateTimePicker3.CustomFormat = "yyyy-mm-dd";
+            this.dateTimePicker3.Enabled = false;
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker3.Location = new System.Drawing.Point(78, 261);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.ShowUpDown = true;
+            this.dateTimePicker3.Size = new System.Drawing.Size(123, 22);
+            this.dateTimePicker3.TabIndex = 252;
+            this.dateTimePicker3.Value = new System.DateTime(2017, 9, 16, 0, 0, 0, 0);
+            // 
             // ABM_8_RegistrarHistEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -698,8 +711,8 @@
             this.BackgroundImage = global::MenuInicio.Properties.Resources.Fondo_Gris1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1169, 580);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dateTimePicker3);
+            this.Controls.Add(this.dateTimePicker4);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox3);
@@ -842,8 +855,8 @@
         private System.Windows.Forms.BindingSource movimientoEmpleadosBindingSource1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dateTimePicker3;
     }
 }
