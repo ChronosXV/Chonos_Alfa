@@ -68,10 +68,8 @@
             this.siteDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.site_DataSet = new MenuInicio.DATASET.Site_DataSet();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.celulasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.celula_DataSet = new MenuInicio.DATASET.Celula_DataSet();
-            this.label10 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -100,6 +98,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleados_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.movimientoEmpleadosBindingSource)).BeginInit();
@@ -454,18 +456,6 @@
             this.label9.TabIndex = 230;
             this.label9.Text = "SITE";
             // 
-            // comboBox9
-            // 
-            this.comboBox9.DataSource = this.celulasBindingSource;
-            this.comboBox9.DisplayMember = "CELU-nombre";
-            this.comboBox9.Enabled = false;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(474, 206);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(121, 23);
-            this.comboBox9.TabIndex = 9;
-            this.comboBox9.ValueMember = "CELU-idCelula";
-            // 
             // celulasBindingSource
             // 
             this.celulasBindingSource.DataMember = "celulas";
@@ -476,18 +466,6 @@
             this.celula_DataSet.DataSetName = "Celula_DataSet";
             this.celula_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(413, 209);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(55, 15);
-            this.label10.TabIndex = 238;
-            this.label10.Text = "CELULA";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -495,7 +473,7 @@
             this.dateTimePicker1.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(102, 325);
+            this.dateTimePicker1.Location = new System.Drawing.Point(102, 346);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(99, 22);
             this.dateTimePicker1.TabIndex = 13;
@@ -507,7 +485,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(7, 331);
+            this.label11.Location = new System.Drawing.Point(7, 352);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 15);
             this.label11.TabIndex = 242;
@@ -519,7 +497,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(7, 373);
+            this.label12.Location = new System.Drawing.Point(7, 394);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(93, 15);
             this.label12.TabIndex = 243;
@@ -532,7 +510,7 @@
             this.dateTimePicker2.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker2.Enabled = false;
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(102, 367);
+            this.dateTimePicker2.Location = new System.Drawing.Point(102, 388);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(99, 22);
             this.dateTimePicker2.TabIndex = 14;
@@ -544,7 +522,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(417, 269);
+            this.label14.Location = new System.Drawing.Point(417, 290);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(61, 15);
             this.label14.TabIndex = 245;
@@ -553,7 +531,7 @@
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(484, 264);
+            this.textBox1.Location = new System.Drawing.Point(484, 285);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(330, 130);
@@ -645,7 +623,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(7, 264);
+            this.label13.Location = new System.Drawing.Point(7, 285);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(68, 15);
             this.label13.TabIndex = 248;
@@ -657,7 +635,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(217, 264);
+            this.label15.Location = new System.Drawing.Point(217, 285);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(54, 15);
             this.label15.TabIndex = 249;
@@ -682,7 +660,7 @@
             this.dateTimePicker4.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker4.Enabled = false;
             this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker4.Location = new System.Drawing.Point(286, 261);
+            this.dateTimePicker4.Location = new System.Drawing.Point(286, 282);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.ShowUpDown = true;
             this.dateTimePicker4.Size = new System.Drawing.Size(123, 22);
@@ -696,12 +674,60 @@
             this.dateTimePicker3.CustomFormat = "yyyy-mm-dd";
             this.dateTimePicker3.Enabled = false;
             this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker3.Location = new System.Drawing.Point(78, 261);
+            this.dateTimePicker3.Location = new System.Drawing.Point(78, 282);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.ShowUpDown = true;
             this.dateTimePicker3.Size = new System.Drawing.Size(123, 22);
             this.dateTimePicker3.TabIndex = 252;
             this.dateTimePicker3.Value = new System.DateTime(2017, 9, 16, 0, 0, 0, 0);
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.DataSource = this.celulasBindingSource;
+            this.comboBox4.DisplayMember = "CELU-nombre";
+            this.comboBox4.Enabled = false;
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(475, 206);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(121, 23);
+            this.comboBox4.TabIndex = 253;
+            this.comboBox4.ValueMember = "CELU-idCelula";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(416, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.TabIndex = 254;
+            this.label4.Text = "AREA";
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.DataSource = this.celulasBindingSource;
+            this.comboBox10.DisplayMember = "CELU-nombre";
+            this.comboBox10.Enabled = false;
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Location = new System.Drawing.Point(693, 206);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(121, 23);
+            this.comboBox10.TabIndex = 255;
+            this.comboBox10.ValueMember = "CELU-idCelula";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Location = new System.Drawing.Point(607, 209);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 15);
+            this.label16.TabIndex = 256;
+            this.label16.Text = "DPTO";
             // 
             // ABM_8_RegistrarHistEmpleado
             // 
@@ -711,6 +737,10 @@
             this.BackgroundImage = global::MenuInicio.Properties.Resources.Fondo_Gris1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1169, 580);
+            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.dateTimePicker4);
             this.Controls.Add(this.label15);
@@ -722,8 +752,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.comboBox9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBox6);
@@ -801,8 +829,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
@@ -858,5 +884,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Label label16;
     }
 }
